@@ -6,7 +6,9 @@ import re
 
 wordPrefix = "../extract/"
 dataPrefix = "../text/"
-imagePrefix = "../imageVector2/"
+# imagePrefix = "../imageVector2/"
+imagePrefix = "/content/drive/My Drive/3rd Project/archive/dataset_image/"
+
 
 class TextItem():
     def __init__(self, sentence, label):
@@ -44,7 +46,10 @@ class TextIterator():
         return dic
 
     def getVocab(self):
-        file = open("../words/vocab")
+        # file = open("../words/vocab")
+        #file = open("/content/24kAuthor/words/vocab")
+        file = open("/content/24kAuthor/words/vocab", "rb")
+
         return pickle.load(file)
 
     def getVocabAttr(self):
